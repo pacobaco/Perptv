@@ -1,0 +1,12 @@
+[Unit]
+Description=PerpTV generator
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/perptv
+ExecStart=/opt/perptv/.venv/bin/python /opt/perptv/tv.py
+User=www-data
+
+[Install]
+WantedBy=multi-user.target
